@@ -7,7 +7,7 @@ from sklearn.linear_model import LinearRegression
 #_____________Training Data
 
 FileName = 'water_potability.csv'
-# FileName = 'cs/1.csv'
+# FileName = 'Train2.csv'
 
 Train_Data = pd.read_csv(FileName) # Training Data with null
 # Train_Data.columns # get columns name
@@ -27,7 +27,7 @@ X_Train =  Train[['ph','Hardness','Solids','Chloramines','Sulfate','Conductivity
 Y_Train = Train.Potability
 
 #__________Test Data
-Test_Data = pd.read_csv('cs/2.csv')
+Test_Data = pd.read_csv('Test2.csv')
 Test = Test_Data.dropna() #Test Data
 
 
@@ -63,5 +63,3 @@ print(Accuracy)
 # print(X_Train.describe())
 # print(X_Train.info())
 
-
-# [LogisticRegression(), DecisionTreeClassifier(), GaussianNB(), RandomForestClassifier(),svm.LinearSVC(), XGBClassifier()]
